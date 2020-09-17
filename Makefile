@@ -11,14 +11,14 @@
 # **************************************************************************** #
 
 VM_LOC = ./srcs/vm/
-VM_NAME = corewar
+VM_NAME = $(VM_LOC)/vm
 
 ASM_LOC = ./srcs/asm
 ASM_NAME = $(ASM_LOC)/asm
 
 all: $(VM_NAME) $(ASM_NAME)
 
-corewar:
+$(VM_NAME):
 	make -C $(VM_LOC)
 
 $(ASM_NAME):
